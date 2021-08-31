@@ -1,16 +1,17 @@
 
-# Gatsby FuncJam '21
+# Gatsby FuncJam '21 - Project Bunting
 
-This example shows how to build a form with [react-hook-form](https://react-hook-form.com/) that submits to a Gatsby Function.
+A Gatsby #FuncJam submission, created by Nicholas Martin - an A/B testing platform with FaunaDB! You can find most details on the [demo site](https://funcjamprojectbunting.gatsbyjs.io/)
 
 1.  **Start developing.**
 
-    To get started clone this repo locally and run `npm install` to add all necessary packages.
+    To get started clone this repo locally and run `yarn install` to add all necessary packages.
+
+    You will also need to set up the FaunaDB environment variables in `.env.development`. Notably, you will need to set `FAUNADB_SECRET`.
 
     ```shell
-    cd examples/functions-basic-form
-    npm install
-    npm run develop
+    yarn install
+    yarn develop
     ```
 
 2.  **Open the code and start customizing!**

@@ -1,0 +1,25 @@
+# Gatsby
+.cache/
+public/
+
+# dependencies
+node_modules/
+
+# Dotenv
+.env.*
+*.env
+
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### System Files ###
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+Desktop.ini
