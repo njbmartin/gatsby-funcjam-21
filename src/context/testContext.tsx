@@ -48,7 +48,7 @@ export const TestProvider: React.FC = ({ children }) => {
     }
     const nextRefresh = timeBetween(new Date(userData.lastUpdated), new Date());
     if (nextRefresh > REFRESH_IN_SECONDS) {
-      axios.get<UserFlags>(`/api/flags/${userData.userId}`).then(({ data }) => {
+      axios.get<UserFlags>(`/api/flags/refresh?userId=${userData.userId}`).then(({ data }) => {
         updateUserData(data);
       });
     }
