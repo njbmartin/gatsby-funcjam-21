@@ -13,7 +13,7 @@ export const Layout: FC = ({ children }) => {
         <Container sx={{ maxWidth: 960, px: 4 }}>
           <Heading>Project Bunting</Heading>
           <Text>
-            {flags["ab-description"] ? (
+            {!!flags["ab-description"] ? (
               <>If you see this, vote for Nico!</>
             ) : (
               <>A Gatsby #FuncJam demo by Nicholas Martin</>

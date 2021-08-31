@@ -56,7 +56,7 @@ const App: FC = () => {
                 <Switch
                   id="enable-email-alerts"
                   readOnly
-                  checked={flags[flag]}
+                  checked={!!flags[flag]}
                 />
               </Box>
               <Label htmlFor="enable-email-alerts" sx={{ flex: 1 }}>
@@ -78,7 +78,7 @@ const App: FC = () => {
         <Heading my={2}>
           Hidden section example <Badge>hidden-section</Badge>
         </Heading>
-        {flags["hidden-section"] ? (
+        {!!flags["hidden-section"] ? (
           <Paragraph my={4}>
             If you can see this section, then you are incredibly lucky! Or, it
             just means that the flag is enabled.
@@ -88,7 +88,7 @@ const App: FC = () => {
             There is nothing to see here (because the flag is disabled).
           </Paragraph>
         )}
-        <Box color={flags["purple-text"] && "primary"}>
+        <Box color={!!flags["purple-text"] && "primary"}>
           <Heading my={2}>
             How does it work? <Badge>purple-text</Badge>
           </Heading>
