@@ -32,6 +32,8 @@ Found a potential bug in Gatsby Cloud when using dynamic routes using square bra
 
 So trying `splat` routing in case, otherwise I will use `query`.
 
+Update 2: Nope, using `query` now.
+
 ## Submission Checklist
 
 - [x] Add installation documentation to the README
