@@ -24,6 +24,13 @@ A Gatsby #FuncJam submission, created by Nicholas Martin - an A/B testing platfo
 
 You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
+## Bugs?
+
+Found a potential bug in Gatsby Cloud when using dynamic routes using square brackets, eg. `/api/[userId]`, similar syntax to client-only routes, so it might be intentional? It works locally, even after using `gatsby build && gatsby serve`, but doesn't work in Gatsby Cloud.
+
+`res.params.userId` is undefined, but the path is still correctly routed...
+
+So trying `splat` routing in case, otherwise I will use `query`.
 
 ## Submission Checklist
 
