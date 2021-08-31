@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import { useFlags } from "../context/testContext";
 import {
   Badge,
@@ -14,6 +14,14 @@ import { Layout } from "../components/layout";
 
 const App: FC = () => {
   const flags = useFlags();
+  
+  // There appears to be a bug with Theme UI, where we need to force a re-render
+  // in order for the color value to be applied. Why? I don't actually know...
+  // So, this is a workaround to that issue.
+  const [purpleText, setPurpleText] = useState<string>();
+  useEffect(() => {
+    flags["purple-text"] && setPurpleText("primary");
+  }, []);
 
   const flagKeys: string[] = useMemo(
     () => flags && Object.keys(flags),
@@ -56,7 +64,7 @@ const App: FC = () => {
                 <Switch
                   id="enable-email-alerts"
                   readOnly
-                  checked={!!flags[flag]}
+                  checked={flags[flag]}
                 />
               </Box>
               <Label htmlFor="enable-email-alerts" sx={{ flex: 1 }}>
@@ -78,18 +86,18 @@ const App: FC = () => {
         <Heading my={2}>
           Hidden section example <Badge>hidden-section</Badge>
         </Heading>
-        {!!flags["hidden-section"] ? (
+        {flags["hidden-section"] ? (
           <Paragraph my={4}>
             If you can see this section, then you are incredibly lucky! Or, it
             just means that the flag is enabled.
           </Paragraph>
         ) : (
           <Paragraph my={4}>
-            There is nothing to see here (because the flag is disabled).
+            There is nothing to see here (hint: the flag is disabled).
           </Paragraph>
         )}
-        <Box color={!!flags["purple-text"] && "primary"}>
-          <Heading my={2}>
+        <Box>
+          <Heading my={2} color={purpleText}>
             How does it work? <Badge>purple-text</Badge>
           </Heading>
           <Paragraph my={4}>
