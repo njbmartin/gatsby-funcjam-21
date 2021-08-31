@@ -24,15 +24,13 @@ A Gatsby #FuncJam submission, created by Nicholas Martin - an A/B testing platfo
 
 You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
-## Bugs?
+## Dynamic API routing?
 
-Found a potential bug in Gatsby Cloud when using dynamic routes using square brackets, eg. `/api/[userId]`, similar syntax to client-only routes, so it might be intentional? It works locally, even after using `gatsby build && gatsby serve`, but doesn't work in Gatsby Cloud.
+I misread the documentation (https://www.gatsbyjs.com/docs/reference/functions/routing/) as I thought I could use dynamic routes using square brackets, eg. `/api/[userId]`, similar syntax to client-only routes. Oddly enough, it works locally, even when serving a build, but doesn't work in Gatsby Cloud... sad face emoji
 
-`res.params.userId` is undefined, but the path is still correctly routed...
+`res.params.userId` is undefined, but oddly the path is still correctly routed...
 
-So trying `splat` routing in case, otherwise I will use `query`.
-
-Update 2: Nope, using `query` now.
+For now, I switched to using query, but left in the original dynamic path for visibility.
 
 ## Submission Checklist
 
