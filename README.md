@@ -34,8 +34,8 @@ So trying `splat` routing in case, otherwise I will use `query`.
 
 ## Submission Checklist
 
-- [ ] Add installation documentation to the README
-- [ ] Update the `/api` folder with your function
+- [x] Add installation documentation to the README
+- [x] Update the `/api` folder with your function
 - [ ] Submit your theme at https://gatsbyjs.com/func-jam-21/
 
 ## Helpful Links
