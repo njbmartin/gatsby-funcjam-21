@@ -27,8 +27,8 @@ You can deploy this example on Gatsby Cloud by copying the example into a new re
 
 ## Submission Checklist
 
-- [ ] Add installation documentation to the README
-- [ ] Update the `/api` folder with your function
+- [x] Add installation documentation to the README
+- [x] Update the `/api` folder with your function
 - [ ] Submit your theme at https://gatsbyjs.com/func-jam-21/
 
 ## Helpful Links
