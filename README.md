@@ -1,7 +1,7 @@
 
 # Gatsby FuncJam '21 - Project Bunting
 
-A Gatsby #FuncJam submission, created by Nicholas Martin - an A/B testing platform with FaunaDB! You can find most details on the [demo site](https://funcjamprojectbunting.gatsbyjs.io/)
+A Gatsby #FuncJam submission, created by Nicholas Martin - an A/B testing / feature flag platform made with ☕ and FaunaDB! You can find most details on the [demo site](https://funcjamprojectbunting.gatsbyjs.io/)
 
 1.  **Start developing.**
 
@@ -36,7 +36,7 @@ For now, I switched to using query, but left in the original dynamic path for vi
 
 - [x] Add installation documentation to the README
 - [x] Update the `/api` folder with your function
-- [ ] Submit your theme at https://gatsbyjs.com/func-jam-21/
+- [x] Submit your theme at https://gatsbyjs.com/func-jam-21/
 
 ## Helpful Links
 
