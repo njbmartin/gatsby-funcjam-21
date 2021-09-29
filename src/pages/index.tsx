@@ -19,8 +19,37 @@ import { useSpotify } from "../context/spotifyContext";
 const App: FC = () => {
   const { current, recent } = useSpotify();
 
+  const background = current
+    ? current.item.album.images[0].url
+    : recent.items[0].track.album.images[0].url;
+
   return (
     <Layout>
+      <Box
+        sx={{
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+          position: "absolute",
+          backgroundColor: "#333",
+        }}
+      />
+      {background && (
+        <Box
+          sx={{
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            filter: "blur(8em) opacity(0.6)",
+            position: "absolute",
+            backgroundImage: `url(${background})`,
+          }}
+        />
+      )}
       <CurrentlyPlaying current={current} />
       <RecentList recent={recent} />
     </Layout>

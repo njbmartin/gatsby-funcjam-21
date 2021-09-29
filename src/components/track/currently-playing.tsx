@@ -16,29 +16,6 @@ export const CurrentlyPlaying: FC<CurrentlyPlayingProps> = ({ current }) => {
 
   return (
     <>
-      <Box
-        sx={{
-          left: 0,
-          right: 0,
-          top: 0,
-          bottom: 0,
-          position: "absolute",
-          backgroundColor: "#333",
-        }}
-      />
-      <Box
-        sx={{
-          left: 0,
-          right: 0,
-          top: 0,
-          bottom: 0,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          filter: "blur(8em) opacity(0.6)",
-          position: "absolute",
-          backgroundImage: `url(${track.album.images[0].url})`,
-        }}
-      />
       <Container
         sx={{
           maxWidth: 960,
