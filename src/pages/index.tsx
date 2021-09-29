@@ -19,9 +19,9 @@ import { useSpotify } from "../context/spotifyContext";
 const App: FC = () => {
   const { current, recent } = useSpotify();
 
-  const background = current
-    ? current.item.album.images[0].url
-    : recent && recent.items[0].track.album.images[0].url;
+  const background =
+    current?.item?.album?.images[0]?.url ||
+    recent?.items[0]?.track?.album?.images[0]?.url;
 
   return (
     <Layout>
