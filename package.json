@@ -1,8 +1,8 @@
 {
-  "name": "project-bunting",
+  "name": "ohmyspotify",
   "version": "1.0.0",
   "private": true,
-  "description": "Project Bunting - A Gatsby Funcjam submission, creating an A/B testing platform with FaunaDB!",
+  "description": "My Spotify - A Gatsby Funcjam submission, creating an alternative view of your Spotify currently playing, and recent tracks!",
   "author": "Nicholas Martin",
   "keywords": [
     "gatsby",
@@ -18,18 +18,23 @@
   "dependencies": {
     "@theme-ui/preset-funk": "^0.11.1",
     "@types/react-helmet": "^6.1.2",
+    "axios": "^0.21.4",
     "dotenv": "^10.0.0",
     "faunadb": "^4.3.0",
-    "gatsby": "next",
+    "gatsby": "^4.0.0-zz-next.1",
     "gatsby-plugin-gatsby-cloud": "^3.0.0",
     "gatsby-plugin-react-helmet": "^4.12.0",
     "gatsby-plugin-theme-ui": "^0.11.1",
+    "javascript-time-ago": "^2.3.9",
     "localforage": "^1.10.0",
     "prettier": "^2.3.2",
+    "query-string": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.5.2",
+    "react-query": "^3.24.4",
+    "react-time-ago": "^7.1.2",
     "theme-ui": "^0.11.1"
   }
 }

@@ -1,12 +1,12 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    url: `https://project-bunting.gatsbyjs.io/`,
-    title: `Project Bunting`,
-    description: `Create your own A/B testing tool using Gatsby Functions and FaunaDB`,
+    url: `https://ohmyspotify.gatsbyjs.io/`,
+    title: `Oh My Spotify`,
+    description: `An alternative view of your Spotify currently playing, and recent tracks`,
     language: `en-gb`,
     keywords: [`gatsby`, `gatsby-functions`],
   },
@@ -18,4 +18,4 @@ module.exports = {
       },
     },
   ],
-}
+};

@@ -1,45 +1,47 @@
+# Gatsby FuncJam '21 - Oh My Spotify
 
-# Gatsby FuncJam '21 - Project Bunting
+A Gatsby #FuncJam submission, created by Nicholas Martin - Using the Spotify Web API to show currently playing track, and recent tracks!
 
-A Gatsby #FuncJam submission, created by Nicholas Martin - an A/B testing / feature flag platform made with ☕ and FaunaDB! You can find most details on the [demo site](https://funcjamprojectbunting.gatsbyjs.io/)
+1.  **Getting started.**
 
-1.  **Start developing.**
+    To get started, clone this repo locally and run `yarn install` to add all necessary packages.
 
-    To get started clone this repo locally and run `yarn install` to add all necessary packages.
+    You will also need to set up the environment variables in `.env.development`.
 
-    You will also need to set up the FaunaDB environment variables in `.env.development`. Notably, you will need to set `FAUNADB_SECRET`.
+2.  **Spotify Development**
+
+    You can connect to the Spotify API in development mode without needing approval, but you need to specifically give access to users.
+
+    First, head to https://developer.spotify.com/ and log in with your Spotify account.
+
+    Then, head to the dashboard and create an application. Give it any name you like and a brief description.
+
+    Then set up the Redirect URIs, which will be your local url and/or the gatsby cloud URL. (eg: `http://127.0.0.1:8000/`)
+
+    Head to `Users and Access`, and add the spotify accounts you would like to test the app with.
+
+    Add the `Client ID` and `Client Secret` to your environment variables:
+
+    ```
+    SPOTIFY_CLIENT_ID
+    SPOTIFY_CLIENT_SECRET
+    ```
+
+3.  **Start the local development**
 
     ```shell
-    yarn install
     yarn develop
     ```
 
-2.  **Open the code and start customizing!**
+4.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/form
+    Your site is now running at http://localhost:8000! You should see a button to Login to Spofify in the header.
 
-    Try editing the function in `src/api/form.ts` or form at `src/pages/index.js`
-
-3.  **Deploy**
+5.  **Deploy**
 
 You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
-
-## Dynamic API routing?
-
-I misread the documentation (https://www.gatsbyjs.com/docs/reference/functions/routing/) as I thought I could use dynamic routes using square brackets, eg. `/api/[userId]`, similar syntax to client-only routes. Oddly enough, it works locally, even when serving a build, but doesn't work in Gatsby Cloud... sad face emoji
-
-`res.params.userId` is undefined, but oddly the path is still correctly routed...
-
-For now, I switched to using query, but left in the original dynamic path for visibility.
-
-## Submission Checklist
-
-- [x] Add installation documentation to the README
-- [x] Update the `/api` folder with your function
-- [x] Submit your theme at https://gatsbyjs.com/func-jam-21/
 
 ## Helpful Links
 
 Read the Gatsby [functions docs](https://www.gatsbyjs.com/docs/reference/functions/).
-Check out this video all about Gatsby functions 
-Take a look at the Functions Use Cases over [here](https://www.gatsbyjs.com/products/cloud/functions/). 
+Take a look at the Functions Use Cases over [here](https://www.gatsbyjs.com/products/cloud/functions/).
