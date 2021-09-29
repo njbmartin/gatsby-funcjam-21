@@ -21,7 +21,7 @@ const App: FC = () => {
 
   const background = current
     ? current.item.album.images[0].url
-    : recent.items[0].track.album.images[0].url;
+    : recent && recent.items[0].track.album.images[0].url;
 
   return (
     <Layout>
