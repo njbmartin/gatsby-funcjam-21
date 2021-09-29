@@ -24,7 +24,7 @@ const requestHandler = async (
     return res.status(405).json({ message: "well, thats not allowed is it?" });
   }
 
-  const { "x-spotify-code": spotifyCode } = req.headers;
+  const { "x-gatsby-spotify-code": spotifyCode } = req.headers;
 
   if (!spotifyCode) {
     return res.status(401).json({ message: "no user?" });

@@ -4,6 +4,6 @@ import { SpotifyData } from "../types/spotify";
 export const fetchUser = (code: string) =>
   axios.get<SpotifyData>(`/api/spotify/user`, {
     headers: {
-      "x-spotify-code": code,
+      "x-gatsby-spotify-code": code,
     },
   });
