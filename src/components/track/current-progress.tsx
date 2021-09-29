@@ -16,5 +16,11 @@ export const CurrentProgress: FC<CurrentProgressProps> = ({ current }) => {
   if (!current) return null;
 
   const { item: track } = current;
-  return <Progress max={1} value={progress / track.duration_ms} />;
+  return (
+    <Progress
+      max={1}
+      value={progress / track.duration_ms}
+      sx={{ height: 10 }}
+    />
+  );
 };
